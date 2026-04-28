@@ -604,6 +604,20 @@ tr:nth-child(even) td { background: #faf6f1; }
   background: #f9fef9;
 }
 
+/* ── Links in cards & tables ── */
+.hotel-name a { color: inherit; text-decoration: underline; text-decoration-color: var(--terra); text-underline-offset: 3px; }
+.hotel-name a:hover { color: var(--terra); }
+
+table td a,
+table td a:visited { color: inherit; font-weight: 700; text-decoration: none; }
+table td a:hover { color: var(--terra); text-decoration: underline; text-decoration-color: var(--terra); }
+
+.day-content a,
+.day-content a:visited { color: var(--blue); }
+
+.logistics-item a,
+.logistics-item a:visited { color: var(--blue); }
+
 /* ── Footer ── */
 footer {
   text-align: center;
