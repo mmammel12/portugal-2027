@@ -466,6 +466,14 @@ header .header-badge {
 #june-porto:checked ~ .checklist .porto-content,
 #sept-porto:checked ~ .checklist .porto-content { display: block; }
 
+#may-lagos:checked ~ .sightseeing .lagos-content,
+#june-lagos:checked ~ .sightseeing .lagos-content,
+#sept-lagos:checked ~ .sightseeing .lagos-content { display: block; }
+
+#may-porto:checked ~ .sightseeing .porto-content,
+#june-porto:checked ~ .sightseeing .porto-content,
+#sept-porto:checked ~ .sightseeing .porto-content { display: block; }
+
 /* ── Comparison tables ── */
 .comparison {
   padding: 24px 16px 0;
@@ -552,6 +560,21 @@ tr:nth-child(even) td { background: #faf6f1; }
   font-size: 0.875rem;
   color: var(--text);
 }
+
+/* ── Sightseeing ── */
+.sight-list {
+  margin: 0 0 24px;
+  padding-left: 20px;
+}
+
+.sight-list li {
+  margin-bottom: 10px;
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+
+.sight-list a,
+.sight-list a:visited { color: var(--blue); }
 
 /* ── Checklist ── */
 .checklist-list {
