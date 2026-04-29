@@ -67,7 +67,7 @@ li { margin-bottom: 4px; }
 
 strong { font-weight: 600; }
 
-a { color: var(--blue); }
+a { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
 
 /* ── Header ── */
 header {
@@ -460,8 +460,8 @@ tr:nth-child(even) td { background: #faf6f1; }
 .hotel-name a:hover { color: var(--terra); }
 
 table td a,
-table td a:visited { color: inherit; font-weight: 700; text-decoration: none; }
-table td a:hover { color: var(--terra); text-decoration: underline; text-decoration-color: var(--terra); }
+table td a:visited { color: inherit; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--terra); }
+table td a:hover { color: var(--terra); }
 
 .day-content a,
 .day-content a:visited { color: var(--blue); }
