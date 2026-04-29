@@ -122,119 +122,7 @@ header .header-badge {
   position: relative;
 }
 
-/* ── Tab system ── */
-.tab-system > input[type="radio"] {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-  pointer-events: none;
-}
-
-/* ── Primary Nav (dates) ── */
-.nav-primary {
-  background: var(--card-bg);
-  display: flex;
-  gap: 0;
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-}
-
-.nav-primary label {
-  flex: 1;
-  text-align: center;
-  padding: 16px 8px;
-  color: var(--muted);
-  font-size: 0.8125rem;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-  cursor: pointer;
-  border-bottom: 3px solid transparent;
-  transition: color 0.15s, border-color 0.15s;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
-  text-transform: uppercase;
-}
-
-.nav-primary label:hover { color: var(--terra); }
-
-/* Active date tab */
-#may-lagos:checked ~ .nav-primary label[for="may-lagos"],
-#may-porto:checked ~ .nav-primary label[for="may-lagos"],
-#june-lagos:checked ~ .nav-primary label[for="june-lagos"],
-#june-porto:checked ~ .nav-primary label[for="june-lagos"],
-#sept-lagos:checked ~ .nav-primary label[for="sept-lagos"],
-#sept-porto:checked ~ .nav-primary label[for="sept-lagos"] {
-  color: var(--terra);
-  border-bottom-color: var(--terra);
-}
-
-/* ── Secondary Nav (location) ── */
-.nav-secondary {
-  background: var(--bg);
-  border-bottom: 1px solid var(--border);
-  padding: 10px 16px;
-}
-
-.nav-secondary .loc-group {
-  display: none;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-#may-lagos:checked ~ .nav-secondary .loc-may,
-#may-porto:checked ~ .nav-secondary .loc-may { display: flex; }
-#june-lagos:checked ~ .nav-secondary .loc-june,
-#june-porto:checked ~ .nav-secondary .loc-june { display: flex; }
-#sept-lagos:checked ~ .nav-secondary .loc-sept,
-#sept-porto:checked ~ .nav-secondary .loc-sept { display: flex; }
-
-.nav-secondary label {
-  padding: 6px 16px;
-  border-radius: 20px;
-  border: 1.5px solid var(--border);
-  font-size: 0.8125rem;
-  font-weight: 600;
-  cursor: pointer;
-  color: var(--muted);
-  background: var(--card-bg);
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
-  transition: all 0.15s;
-  box-shadow: var(--shadow-sm);
-}
-
-.nav-secondary label:hover {
-  border-color: var(--terra);
-  color: var(--terra);
-}
-
-/* Active location pill */
-#may-lagos:checked ~ .nav-secondary label[for="may-lagos"],
-#june-lagos:checked ~ .nav-secondary label[for="june-lagos"],
-#sept-lagos:checked ~ .nav-secondary label[for="sept-lagos"],
-#may-porto:checked ~ .nav-secondary label[for="may-porto"],
-#june-porto:checked ~ .nav-secondary label[for="june-porto"],
-#sept-porto:checked ~ .nav-secondary label[for="sept-porto"] {
-  background: var(--terra);
-  border-color: var(--terra);
-  color: #fff;
-  box-shadow: 0 2px 8px rgba(126,61,181,0.3);
-}
-
-/* ── Panels ── */
-.panels > section { display: none; }
-
-#may-lagos:checked ~ .panels #panel-may-lagos { display: block; }
-#may-porto:checked ~ .panels #panel-may-porto { display: block; }
-#june-lagos:checked ~ .panels #panel-june-lagos { display: block; }
-#june-porto:checked ~ .panels #panel-june-porto { display: block; }
-#sept-lagos:checked ~ .panels #panel-sept-lagos { display: block; }
-#sept-porto:checked ~ .panels #panel-sept-porto { display: block; }
-
+/* ── Panel ── */
 .panel { padding: 24px 16px 0; }
 
 /* ── Summary Card ── */
@@ -431,54 +319,6 @@ header .header-badge {
   border-top: 1px solid var(--border);
 }
 
-/* ── Location-aware sections ── */
-.lagos-content, .porto-content { display: none; }
-
-#may-lagos:checked ~ .comparison .lagos-content,
-#june-lagos:checked ~ .comparison .lagos-content,
-#sept-lagos:checked ~ .comparison .lagos-content { display: block; }
-
-#may-porto:checked ~ .comparison .porto-content,
-#june-porto:checked ~ .comparison .porto-content,
-#sept-porto:checked ~ .comparison .porto-content { display: block; }
-
-#may-lagos:checked ~ .restaurants .lagos-content,
-#june-lagos:checked ~ .restaurants .lagos-content,
-#sept-lagos:checked ~ .restaurants .lagos-content { display: block; }
-
-#may-porto:checked ~ .restaurants .porto-content,
-#june-porto:checked ~ .restaurants .porto-content,
-#sept-porto:checked ~ .restaurants .porto-content { display: block; }
-
-#may-lagos:checked ~ .logistics .lagos-content,
-#june-lagos:checked ~ .logistics .lagos-content,
-#sept-lagos:checked ~ .logistics .lagos-content { display: block; }
-
-#may-porto:checked ~ .logistics .porto-content,
-#june-porto:checked ~ .logistics .porto-content,
-#sept-porto:checked ~ .logistics .porto-content { display: block; }
-
-#may-lagos:checked ~ .checklist .lagos-content,
-#june-lagos:checked ~ .checklist .lagos-content,
-#sept-lagos:checked ~ .checklist .lagos-content { display: block; }
-
-#may-porto:checked ~ .checklist .porto-content,
-#june-porto:checked ~ .checklist .porto-content,
-#sept-porto:checked ~ .checklist .porto-content { display: block; }
-
-#may-lagos:checked ~ .sightseeing .lagos-content,
-#june-lagos:checked ~ .sightseeing .lagos-content,
-#sept-lagos:checked ~ .sightseeing .lagos-content { display: block; }
-
-#may-porto:checked ~ .sightseeing .porto-content,
-#june-porto:checked ~ .sightseeing .porto-content,
-#sept-porto:checked ~ .sightseeing .porto-content { display: block; }
-
-/* ── Comparison tables ── */
-.comparison {
-  padding: 24px 16px 0;
-}
-
 /* ── Tables ── */
 .table-wrap {
   overflow-x: auto;
@@ -518,18 +358,6 @@ td {
 
 tr:last-child td { border-bottom: none; }
 tr:nth-child(even) td { background: #faf6f1; }
-
-.cmp-table { min-width: 0; }
-
-.cmp-table th,
-.cmp-table td { padding: 8px 10px; }
-
-.cmp-table th:first-child,
-.cmp-table td:first-child {
-  font-weight: 600;
-  white-space: nowrap;
-  color: var(--blue-dark);
-}
 
 /* ── Logistics ── */
 .logistics-block {
@@ -657,11 +485,6 @@ footer {
   header { padding: 56px 16px 48px; }
   header h1 { font-size: 3rem; }
   header .header-sub { font-size: 1rem; }
-
-  .nav-primary label {
-    font-size: 0.875rem;
-    padding: 16px 24px;
-  }
 
   .summary-card {
     grid-template-columns: 1fr 1fr 1fr;
